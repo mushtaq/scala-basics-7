@@ -7,7 +7,7 @@ object Sorter {
     case head :: tail                    => x :: xs
   }
 
-  def sort[T](xs: List[T])(ord: Ord[T]): List[T] = xs match {
+  def sort[T](xs: List[T])(implicit ord: Ord[T]): List[T] = xs match {
     case Nil          => Nil
     case head :: tail => insert(head, sort(tail)(ord))(ord)
   }

@@ -1,5 +1,7 @@
 package data
 
+import sorting.Ord
+
 case class Book(
   author: String,
   title: String,
@@ -9,6 +11,9 @@ case class Book(
 
 object Book {
 
+  implicit val booOrd: Ord[Book] = new Ord[Book] {
+    def lt(a: Book, b: Book): Boolean = a.basePrice < b.basePrice
+  }
 
 }
 
