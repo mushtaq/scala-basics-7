@@ -8,4 +8,6 @@ Json.toJson(List(1, 2, 3))
 Json.toJson(List("a", "b"))
 Json.toJson(List("a", "b"))
 Json.toJson(Data.books)
+Json.toJson(Data.people)
+
 
